@@ -4,7 +4,7 @@
 // @version      1.6
 // @description  添加按钮，通过点击按钮来触发自动点击所有匹配的<a>链接的功能
 // @author       你的名字
-// @match        https://www.teachersedu.cn/project/projectcourselist?projectid=588614481471341829
+// @match        https://www.teachersedu.cn/*
 // @grant        none
 // ==/UserScript==
 
@@ -20,7 +20,7 @@
     customButton.style.zIndex = 1000;
     customButton.style.padding = '10px';
     customButton.style.backgroundColor = '#4CAF50';
-    customButton.style.color = 'white';
+    customButton.style.color = '#000';
     customButton.style.border = 'none';
     customButton.style.borderRadius = '5px';
     customButton.style.cursor = 'pointer';
