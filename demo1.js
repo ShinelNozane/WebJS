@@ -33,14 +33,15 @@
         triggerButton.addEventListener('click', function() {
             // 设置延迟时间（毫秒）
             var delay = 100;
-
+            
             // 使用setTimeout来实现延迟点击
             setTimeout(function() {
+                
                 // 使用CSS选择器找到按钮元素
-                var button = document.querySelector('#teacher > section > div > div > div.study-center-content > div > div.article-list-body.row > div > table > tbody > tr:nth-child(1) > td:nth-child(4) > div'); // 替换为实际的选择器
+                var button = document.querySelector('#teacher > section > div > div > div.study-center-content > div > div.article-list-body.row > div > table > tbody > tr:nth-child(3) > td:nth-child(4) > div > a'); // 替换为实际的选择器
                 
                 // 检查按钮是否存在
-                if (button) {
+                if (button.textContent.trim() === '去学习') {
                     // 自动点击按钮
                     button.click();
                     console.log('按钮已被自动点击');
