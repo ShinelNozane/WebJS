@@ -21,7 +21,7 @@
         triggerButton.style.zIndex = '9999';
         triggerButton.style.padding = '10px';
         triggerButton.style.backgroundColor = '#28a745';
-        triggerButton.style.color = '#fff';
+        triggerButton.style.color = '#000';
         triggerButton.style.border = 'none';
         triggerButton.style.borderRadius = '5px';
         triggerButton.style.cursor = 'pointer';
@@ -32,7 +32,7 @@
         // 给按钮绑定点击事件
         triggerButton.addEventListener('click', function() {
             // 设置延迟时间（毫秒）
-            var delay = 3000; // 3秒
+            var delay = 100;
 
             // 使用setTimeout来实现延迟点击
             setTimeout(function() {
