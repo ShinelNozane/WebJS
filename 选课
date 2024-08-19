@@ -1,0 +1,52 @@
+// ==UserScript==
+// @name         自动选课
+// @namespace    http://tampermonkey.net/
+// @version      1.1
+// @description  none
+// @author       你的名字
+// @match        https://www.teachersedu.cn/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // 创建并添加一个按钮到页面
+    var customButton = document.createElement('button');
+    customButton.innerText = '点击所有链接';
+    customButton.style.position = 'fixed';
+    customButton.style.top = '10px';
+    customButton.style.right = '10px';
+    customButton.style.zIndex = 1000;
+    customButton.style.padding = '10px';
+    customButton.style.backgroundColor = '#4CAF50';
+    customButton.style.color = '#000';
+    customButton.style.border = 'none';
+    customButton.style.borderRadius = '5px';
+    customButton.style.cursor = 'pointer';
+
+    document.body.appendChild(customButton);
+
+    // 设置按钮点击事件
+    customButton.addEventListener('click', function() {
+        console.log('按钮被点击，开始自动点击所有目标链接');
+
+        // 开始执行点击功能
+        clickTargetLinks();
+    });
+
+    // 自动点击多个目标链接的函数
+    function clickTargetLinks() {
+        // 使用选择器定位所有目标<a>元素
+        var targetLinks = document.querySelectorAll('#content-container > div.course-list > div > div:nth-child(1)');
+
+        // 检查是否找到了目标链接
+        if (targetLinks.length) {
+          targetLinks.click();
+          console.log('目标元素已被点击');
+        } else {
+            console.log('未找到任何目标<a>元素');
+        }
+    }
+
+})();
